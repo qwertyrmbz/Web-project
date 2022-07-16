@@ -1,2 +1,2 @@
 # Web-Dev-Project
-![Screen](1.jpg)
+![Screen](web-project/1.jpg)
