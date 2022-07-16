@@ -1,0 +1,24 @@
+.main-area {
+    padding-top: 64px;
+    padding-right: 40px;
+    padding-left: 40px;
+    height: 600px;
+    width: 100%;
+    background-image: url('../../assets/background.jpg');
+    background-size: cover;
+    text-align: center;
+}
+
+.main-area h1 {
+    color: rgb(187, 180, 172);
+    font-size: 60px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.main-area p {
+    color: rgb(187, 180, 172);
+    font-size: 20px;
+    font-weight: bold;
+}

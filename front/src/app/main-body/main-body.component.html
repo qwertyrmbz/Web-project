@@ -1,0 +1,11 @@
+<div class="main-area">
+    <h1>Library</h1>
+    <p>"The only thing that you absolutely have to know, is the location of the library."</p>
+    <p>Albert Einstein</p>
+</div>
+<div class="sections">
+  <div *ngFor="let section of sections">
+    <app-section [current]="section">
+    </app-section>
+  </div>
+</div>

@@ -1,0 +1,46 @@
+<app-header></app-header>
+<div class = "explorer">
+  <h3>Explorer</h3>
+
+  <div class ="main">
+    <div class = "topics" *ngFor="let topic of topics" >
+      <!-- <img *ngIf="isSelected(topic.id)" src="../assets/opened.png"> -->
+      <ng-template [ngIf]="isSelected(topic.id)" [ngIfElse]="closed">
+        <img src="../assets/opened.png" (click)="onClick(topic.id)">
+        <div class = "nothing" (click) = "addTab(topic.id, 0)" >{{topic.name}}</div>
+        <div class = "subtopics" *ngFor="let subtopic of findTopic(topic.id)">
+          <div class = "nothing" (click) = "addTab(subtopic.id, 1)" >{{subtopic.name}}</div>
+        </div>
+      </ng-template>
+
+      <ng-template #closed>
+        <img src="../assets/closed.png" (click)="onClick(topic.id)" >
+        <div class = "nothing" (click) = "addTab(topic.id, 0)" >{{topic.name}}</div>
+      </ng-template>
+
+    </div>
+  </div>
+</div>
+
+<div class="content">
+  <div class = "opened">
+
+    <div class=tab-container>
+      <ul class="tabs clearfix" >
+        <li  *ngFor="let info of tabs" [class.active]="isActiveTab(info)" (click)="changeActive(info)" (dblclick) = "delete(info)">
+          <a href=# >{{getContent(info).name}}</a>
+        </li>
+      </ul>
+    </div>
+    <div class=outer-circle></div>
+
+  </div>
+  <div class = "main_page" *ngIf="isActive">
+    <h1>{{getActive().name}}</h1>
+    <hr>
+    <h2>{{getActive().description}}</h2>
+    <!-- <h4>{{getActiove().code}}</h4>> -->
+  </div>
+  <!-- <ng-template #elseBlock></ng-template> -->
+</div>
+<app-footer></app-footer>

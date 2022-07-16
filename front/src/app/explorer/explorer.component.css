@@ -1,0 +1,164 @@
+.explorer{
+  padding-top: 5px;
+  padding-right: 20px;
+  padding-left: 10px;
+  height: 100vh;
+  width: 17vw;
+  background-color: gray;
+  background-size: cover;
+  text-align: left;
+  float: left;
+}
+.header{
+  padding-left: 23px;
+  position: inherit;
+}
+.main{
+  padding-left: 23px;
+}
+.topics{
+  padding-left: 23px;
+}
+.subtopics{
+  padding-left: 23px;
+
+}
+img {
+  /* border: 1px solid #000;
+   border-radius: 5px;
+   padding: 2px;*/
+  padding-right: 4px;
+  width: 10px;
+  height: 10px;
+
+}
+a{
+  color: black;
+  text-decoration: none;
+}
+/*
+li{
+
+    list-style-type: none;
+}
+ul{
+    padding-left: 20px;
+}*/
+.nothing{
+  padding-left: 3px;
+  display: inline;
+}
+
+.content{
+  height: 100vh;
+  background-color: #1F1F1F;
+  padding-left: 17vw;
+
+}
+.opened{
+  height: 40px;
+  padding-left: 0px;
+  background-color: #555;
+}
+.main_page{
+  padding-left: 23px;
+  padding-bottom: 0px;
+  color: gray;
+}
+
+.tab-container{
+  background : rgb(39, 29, 40);
+  margin: 0;
+  padding: 0;
+  height: 95%;
+  border-bottom: 20px solid, #555;
+
+}
+
+ul.tabs{
+  margin: 0;
+  list-style-type : none;
+  line-height : 35px;
+  max-height: 100%;
+  overflow: hidden;
+  display: inline-block;
+  padding-right: 20px
+}
+
+ul.tabs > li.active{
+  z-index: 2;
+}
+
+ul.tabs > li.active:before{
+}
+
+
+ul.tabs > li.active:after{
+  border-color : transparent transparent transparent #555;
+}
+ul.tabs > li.active > a{
+  pointer-events: none;
+
+  color: #DDD;
+}
+
+ul.tabs > li{
+  float : right;
+  margin : 5px -10px 0;
+  border-top-right-radius: 25px 170px;
+  border-top-left-radius: 20px 90px;
+  padding : 0 30px 0 25px;
+  height: 170px;
+  background: #555;
+  position : relative;
+  box-shadow: 0 10px 20px #444;
+  max-width : 200px;
+}
+
+ul.tabs > li > a{
+  pointer-events: none;
+  color: gray;
+  display: inline-block;
+  max-width:100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-decoration: none;
+}
+
+ul.tabs > li:before, ul.tabs > li:after{
+  content : '';
+  background : transparent;
+  height: 20px;
+  width: 20px;
+  border-radius: 100%;
+  border-width: 10px;
+  top: 0px;
+  border-style : solid;
+  position : absolute;
+}
+
+ul.tabs > li:before{
+  border-color : transparent #555 transparent transparent;
+  -webkit-transform : rotate(48deg);
+  -moz-transform : rotate(48deg);
+  -ms-transform : rotate(48deg);
+  -o-transform : rotate(48deg);
+  transform : rotate(48deg);
+  left: -23px;
+}
+
+ul.tabs > li:after{
+  border-color : transparent transparent transparent #555;
+  -webkit-transform : rotate(-48deg);
+  -moz-transform : rotate(-48deg);
+  -ms-transform : rotate(-48deg);
+  -o-transform : rotate(-48deg);
+  transform : rotate(-48deg);
+  right: -17px;
+}
+
+/* Clear Fix took for HTML 5 Boilerlate*/
+
+/*.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix  zoom: 1; */

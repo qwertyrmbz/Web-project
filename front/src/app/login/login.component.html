@@ -1,0 +1,13 @@
+<app-header></app-header>
+<div class="main-area">
+  <div class="block">
+    <h1>Library</h1>
+    <form>
+      <h2>Sign in to see the collection of algorithms and data structures.</h2>
+      <input type="text" placeholder="Username" #username>
+      <input type="password" placeholder="Password" #password>
+      <button (click)="login(username.value, password.value); username.value=''; password.value=''"><span>Sign in</span></button>
+    </form>
+  </div>
+</div>
+<app-footer></app-footer>

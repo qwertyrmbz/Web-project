@@ -1,0 +1,118 @@
+.wrap {
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: floralwhite;
+  display: flex;
+  justify-content: space-between;
+}
+
+.link{
+  font-size: 20px;
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  padding-left: 10px;
+  padding-bottom: 5px;
+  padding-right: 10px;
+}
+
+.link:hover {
+  cursor: pointer;
+}
+
+.link::before{
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to top, rgb(187, 180, 172) 25%, rgba(0, 0, 0, 0) 40%);
+  position: absolute;
+  left: 0;
+  bottom: 2px;
+  z-index: -1;
+  will-change: width;
+  transform: rotate(-2deg);
+  transform-origin: left bottom
+}
+
+.link:hover::before{
+  width: 0;
+}
+
+.link::before{
+  transition: width .1s ease-out;
+}
+
+.link:hover::before{
+  transition-duration: .15s;
+}
+
+.buttons {
+  margin: 0px;
+  padding: 0px;
+}
+
+button {
+  display: inline-block;
+  position: relative;
+  border: none;
+  color: rgb(187, 180, 172);
+  font-weight: bold;
+  font-size: 12px;
+  cursor: pointer;
+  margin-left: 0px;
+  background: rgb(80, 51, 61);
+}
+
+span{
+  display: block;
+  padding: 10px 10px;
+}
+
+button::before, button::after{
+  content:"";
+  width: 0;
+  height: 4px;
+  position: absolute;
+  transition: all 0.2s linear;
+  background: rgb(21, 13, 16);
+}
+
+span::before, span::after{
+  content:"";
+  width: 4px;
+  height:0;
+  position: absolute;
+  transition: all 0.2s linear;
+  background: rgb(21, 13, 16);
+}
+
+button:hover::before, button:hover::after{
+  width: 100%;
+}
+
+button:hover span::before, button:hover span::after{
+  height: 100%;
+}
+
+button::after{
+  left:0;
+  bottom: 0;
+  transition-duration: 0.4s;
+}
+button span::after{
+  right:0;
+  top: 0;
+  transition-duration: 0.4s;
+}
+button::before{
+  right: 0;
+  top: 0;
+  transition-duration: 0.4s;
+}
+button span::before{
+  left: 0;
+  bottom: 0;
+  transition-duration: 0.4s;
+}
+

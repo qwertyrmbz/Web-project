@@ -1,0 +1,10 @@
+<div class="block">
+  <form>
+    <h2>Please, fill all the fields:</h2>
+    <input type="text" placeholder="Name" #topicName />
+    <input type="text" placeholder="Description" #topicDescription />
+    <button (click)="add(topicName.value, topicDescription.value); topicName.value=''; topicDescription.value=''">
+      <span>Add</span>
+    </button>
+  </form>
+</div>

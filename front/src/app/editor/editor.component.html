@@ -1,0 +1,18 @@
+<app-header></app-header>
+<div class="main-area">
+  <div class="main-block">
+    <h1>{{ section.name }}</h1>
+    <button class="add-topic-btn" (click)="showCreateComponent()"><span>Add new topic</span></button>
+    <div *ngIf="showComponent">
+      <app-create-topic>
+      </app-create-topic>
+    </div>
+    <div class="topics">
+      <div *ngFor="let topic of topics">
+        <app-topic [topic]="topic">
+        </app-topic>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

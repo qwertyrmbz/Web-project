@@ -1,0 +1,24 @@
+<div class="outer">
+  <div class="inner">
+    <div class="flex">
+    <div class="image">
+      <img src="{{ current.image }}" height=200>
+    </div>
+    <div class="block">
+      <h2>
+        {{ current.name }}
+      </h2>
+      <p>
+        {{ current.description }}
+      </p>
+      <div *ngIf="user.is_staff == 1; else regular" class="buttons">
+        <button routerLink="/sections/{{current.id}}/explorer"><span>See topics</span></button>
+        <button routerLink="/sections/{{current.id}}/editor"><span>Editor</span></button>
+      </div>
+      <ng-template #regular class="singlebutton">
+        <button><span>Start reading</span></button>
+      </ng-template>
+    </div>
+    </div>
+  </div>
+</div>
